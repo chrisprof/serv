@@ -1,0 +1,28 @@
+#Back-Tutorial {
+    display:flex;
+    border-width: 5px;
+    margin: 20px;
+    flex-direction: column;
+    padding-left:5px;
+    flex-wrap:wrap;
+    color: rgb(255, 255, 255);
+    
+}
+
+
+.breaker {
+    border: 5px solid;
+    border-radius: 10px;
+    border-color: var(--clr-purple200);
+    background-color: var(--clr-purple200)
+}
+
+#User-guide {
+    margin-bottom: 70px;
+    color: var(--clr-primary-dark);
+}
+
+#T-Image {
+    width: 300px;
+    float: right;
+}
