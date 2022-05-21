@@ -1,11 +1,6 @@
 function Main()
 {
-    return(
-        <div>
-            <h1>hello</h1>
-            <p>bruh</p>
-        </div>
-    )
+    return;
 }
 
 export default Main;

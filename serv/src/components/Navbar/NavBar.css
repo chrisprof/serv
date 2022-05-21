@@ -1,21 +1,5 @@
-:root {
-    --clr-primary: #6a70ee;
-    --clr-primary-hover: #3629e6;
-    --clr-primary-dark: #5449b3;
-    --clr-gray100: #989FCE;
-    --clr-gray200: #4F4D96;
-
-    --radius: 0.2rem;
-}
-  
-  *,
-  *:before,
-  *:after {
-    box-sizing: border-box;
-}
-
 nav{
-  width:100;
+  width:100%;
 }
   
 .n-list {
@@ -27,7 +11,9 @@ nav{
   justify-content: flex-start;
   align-items: center;
 }
-  
+
+/* All element stylings below this comment are functional and work as desired */
+
 .n-item {
   list-style: none;
   margin-right: 2rem;
@@ -39,6 +25,7 @@ nav{
   color: #FFFFFF;
   transition: all 200ms ease-in;
 }
+
 
 .n-item a:hover {
   color: var(--clr-primary-dark);

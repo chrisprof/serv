@@ -1,0 +1,13 @@
+:root {
+    --clr-primary: #6a70ee;
+    --clr-primary-hover: #3629e6;
+    --clr-primary-dark: #5449b3;
+    --clr-gray100: #989FCE;
+    --clr-gray200: #4F4D96;
+    --radius: 0.2rem;
+}
+
+body {
+    font-family: Segoe UI;
+    background: var(--clr-gray100);
+}
