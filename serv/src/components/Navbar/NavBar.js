@@ -1,8 +1,8 @@
 import React from 'react'
 import './NavBar.css'
 function NavBar() {
-    return <body>
-                <navbar>
+    return (
+                <nav>
                     <ul className='n-list'>
                         <li className='n-item'>
                             <a href='#'>home</a>
@@ -14,8 +14,8 @@ function NavBar() {
                             <a href='#'>about us</a>
                         </li>
                     </ul>
-                </navbar>
-            </body>
+                </nav>
+    )
 }
 
 export default NavBar;
