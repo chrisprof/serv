@@ -16,6 +16,9 @@ function NavBar() {
                 <li className='n-item'>
                     <Link to='/aboutus'>about us</Link>
                 </li>
+                <li className='n-item'>
+                    <Link to='/Tutorial'>Need Help?</Link>
+                </li>
             </ul>
         </nav>
         <Outlet />
