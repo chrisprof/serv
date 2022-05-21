@@ -3,7 +3,7 @@ nav{
 }
   
 .n-list {
-  background: #272838;
+  background: var(--clr-purple200);
   
   margin:0;
   width:100%;
