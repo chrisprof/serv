@@ -1,0 +1,65 @@
+#root{
+    color:white;
+}
+
+.flex{
+    display:flex;
+}
+
+#titleHeaderMainpage{
+    font-weight: 5;
+    font-size: 150px;
+    margin:0px;
+}
+
+.centerFlex{
+    display:flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#homepageMainImg{
+    height:auto;
+    width:750px;
+    border-radius: 30px;
+    margin:5% 0% 0% 5%;
+}
+
+#homepageParentDiv{
+    text-align: center;
+}
+
+#homepageRightDiv{
+    margin-left: 6%;
+    align-items: center;
+    flex-direction: column;
+}
+
+#paragraphdiv{
+    display:flex;
+    text-align: center;
+    word-wrap: break-word;
+    justify-content: center;
+    width:70%;
+    margin:0px;
+}
+
+#loginBtn{
+    width:250px;
+    height:100px;
+    border-radius: 30px;
+    background: var(--clr-purple200);
+    color:white;
+    border:none;
+    font-size: 40px;
+    margin-top:30px;
+    transition: all 0.25s;
+}
+
+#loginBtn:hover{
+    box-shadow: 3px 3px 0px var(--clr-darkpurple);
+}
+
+#desc{
+    font-size:27px;
+}
