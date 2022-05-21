@@ -1,8 +1,28 @@
 import './Main.css'
-import login from '../firebase';
+import {loging, auth} from '../firebase';
 
 function Main()
 {
+    let proccedingPage = "/home"
+
+    function login()
+    {
+        try{
+            loging();
+        }
+        catch(err){
+            return err;
+        }
+        
+    }
+
+    auth.onAuthStateChanged(()=>{
+      if(auth.currentUser.displayName)
+      {
+          window.location.href="/home"
+      }
+    })
+
     return(
         <div className="centerFlex" id="homepageParentDiv">
             <img id="homepageMainImg"src="https://www.niche.com/blog/wp-content/uploads/2019/01/importance-of-community-service-1200-1200x794.jpg"/>

@@ -1,8 +1,8 @@
 import {auth} from '../firebase';
-import {useEffect} from "react"
+import {useEffect, useState} from "react"
 
 
-function Post()
+function Home()
 {
     useEffect(()=>{
         if(!auth.currentUser&&!window.location.href=='/')
@@ -12,11 +12,14 @@ function Post()
         }
     },[])
 
+    const [username,setUsername] = useState(localStorage.getItem('name'))
+    
     return(
         <div>
-            <h1>Hello</h1>
+            <h1>Home</h1>
+            <h2>Welcome, {username}</h2>
         </div>
     )
 }
 
-export default Post;
+export default Home;

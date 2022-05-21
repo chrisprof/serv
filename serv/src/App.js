@@ -5,9 +5,11 @@ import Main from './pages/Main';
 import NotFound from './pages/NotFound';
 import AboutUs from './pages/AboutUs';
 import Settings from './pages/Settings';
+import Home from './pages/Home';
 import Tutorial from './pages/Tutorial';
 import NavBar from './components/Navbar/NavBar';
 import Post from './pages/Post';
+import {useEffect} from "react"
 
 
 function App() {
@@ -19,6 +21,7 @@ function App() {
           <Route index element={<Main />} />
           <Route path="aboutus" element={<AboutUs />} />
           <Route path="settings" element={<Settings />} />
+          <Route path="Home" element={<Home />} />
           <Route path="tutorial" element={<Tutorial />} />
           <Route path="*" element={<NotFound />} />
           <Route path="post" element={<Post />}/>

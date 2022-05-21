@@ -1,7 +1,18 @@
 import './Tutorial.css'
+import {auth} from '../firebase';
+import {useEffect} from "react"
+
 
 function Tutorial()
 {
+    useEffect(()=>{
+        if(!auth.currentUser&&!window.location.href=='/')
+        {
+            console.log(window.location.href)
+            window.location.href='/'
+        }
+    },[])
+
     return(
         <div id = 'Back-Tutorial'>
             <h3 id ='User-guide'>Serv User Guide</h3>

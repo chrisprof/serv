@@ -1,0 +1,26 @@
+#logoutBtn{
+    width:250px;
+    height:100px;
+    border-radius: 30px;
+    background: var(--clr-purple200);
+    color:white;
+    border:none;
+    font-size: 40px;
+    margin-top:30px;
+    transition: all 0.25s;
+}
+
+#logoutBtn:hover{
+    box-shadow: 3px 3px 0px var(--clr-darkpurple);
+}
+
+#parentDiv{
+    flex-direction: column;
+    align-items: center;
+}
+
+.centerFlex{
+    display:flex;
+    justify-content: center;
+    text-align: center;
+}

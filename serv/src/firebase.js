@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getAuth, GoogleAuthProvider, signInWithPopup} from "firebase/auth";
+import { getAuth, GoogleAuthProvider, signInWithPopup, signOut} from "firebase/auth";
 import {getFirestore} from "@firebase/firestore"
 
 const firebaseConfig = {
@@ -16,16 +16,18 @@ const app = initializeApp(firebaseConfig);
 // Initialize Firebase
 export const auth = getAuth(app);
 export const db = getFirestore(app);
+export const signoutg = () => {signOut(auth)};
 export default app;
 
-export const login = () =>
+export const loging = () =>
 {
   var provider_g = new GoogleAuthProvider();
   signInWithPopup(auth, provider_g)
   
   .then((re)=>{
     const name = re.user.displayName;
-    console.log(re);
+    localStorage.setItem('name',name);
+    console.log(name);
   })
   .catch((err)=>{
     console.log(err);
