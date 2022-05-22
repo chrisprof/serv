@@ -4,17 +4,16 @@ import {useEffect} from "react"
 
 function Post()
 {
-    useEffect(()=>{
-        if(!auth.currentUser&&!window.location.href=='/')
+    auth.onAuthStateChanged(()=>{
+        if(!auth.currentUser&&!localStorage.getItem('teacher'))
         {
-            console.log(window.location.href)
-            window.location.href='/'
+            window.location.href="/"
         }
-    },[])
+    })
 
     return(
         <div>
-            <h1>Hello</h1>
+            <h1>post</h1>
         </div>
     )
 }

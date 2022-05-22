@@ -1,9 +1,12 @@
 import './Main.css'
 import {loging, auth} from '../firebase';
+import {useEffect, useState} from "react"
 
 function Main()
 {
     let proccedingPage = "/home"
+
+    let goHome = () => {window.location.href=proccedingPage}
 
     function login()
     {
@@ -17,7 +20,7 @@ function Main()
     }
 
     auth.onAuthStateChanged(()=>{
-      if(auth.currentUser.displayName)
+      if(auth.currentUser)
       {
           window.location.href="/home"
       }
@@ -29,7 +32,7 @@ function Main()
             <div className="centerFlex" id="homepageRightDiv">
                 <div className="centerFlex"><h1 id="titleHeaderMainpage">serv</h1></div>
                 <div className="centerFlex" id="paragraphdiv"><p id="desc">helping students find community service opportunities</p></div>
-                <div className="centerFlex"><button id="loginBtn" onClick={login}>login</button></div>
+                <div className="centerFlex"><button id="loginBtn" onClick={auth.currentUser ? goHome : login}>{auth.currentUser ? "home" : "login"}</button></div>
             </div>
         </div>
     )
