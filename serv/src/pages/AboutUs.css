@@ -45,6 +45,15 @@ h1{
     margin-right: 30px;
 }
 
+.A-pfp-m {
+    width: 100px;
+    height:auto;
+    border-radius: 100%;
+    border: 6px solid;
+    border-color: rgb(207, 255, 215);
+    float: right;
+}
+
 .A-disc {
     font-size: 20px;
     text-indent: 50px;

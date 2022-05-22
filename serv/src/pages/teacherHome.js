@@ -20,9 +20,9 @@ function THome()
 
     return(
         <div className='centerFlexH'>
-            <h1>home</h1>
+            <h1>teacher home</h1>
             <h3 id="welcome">Welcome, {username}</h3>
-            <h1 id="guide">Choose your school to get started!</h1>
+            <h1 id="guide">Choose your school to start posting!</h1>
             <div>              
                 <select id="dropdownMenu">
                     <option>choose your school</option>

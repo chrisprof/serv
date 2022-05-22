@@ -19,6 +19,7 @@ function Post()
                 <input class="text-input" type={"text"} placeholder="Title"/>
                 <input class="text-input" type={"text"} placeholder="Description"/>
                 <input class="text-input" type={"text"} placeholder="Hours"/>
+                <button>post</button>
             </div>
         </div>
     )
