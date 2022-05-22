@@ -1,5 +1,5 @@
 import {auth,db} from '../firebase';
-import {useState} from "react"
+import {useEffect, useState} from "react"
 
 import { doc, setDoc,getDoc} from "firebase/firestore"; 
 import './Post.css'

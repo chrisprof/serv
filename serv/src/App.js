@@ -27,9 +27,8 @@ function App() {
           <Route path="shome" element={<SHome />} />
           <Route path="thome" element={<THome />} />
           <Route path="tutorial" element={<Tutorial />} />
-          <Route path="*" element={<NotFound />} />
           <Route path="post" element={<Post />}/>
-          <Route path="Results" element={<Results />}/>
+          <Route path="results" element={<Results />}/>
           <Route path="check" element={<Check />}/>
         </Route>
       </Routes>

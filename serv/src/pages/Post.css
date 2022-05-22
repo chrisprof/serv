@@ -9,6 +9,7 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+    text-align: center;
 }
 
 .flexcent{
@@ -27,4 +28,9 @@ input{
     border-radius: 13px;
     background-color: var(--clr-purple200);
     color:white;
+    transition: all 0.25s;
+}
+
+#post:hover{
+    box-shadow: 3px 3px 0px var(--clr-darkpurple);
 }

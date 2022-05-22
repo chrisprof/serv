@@ -66,15 +66,14 @@ function Results()
 
         main();
     }
-
-    function test()
-    {
-        makeListing('hi','hi','hi');
-    }
+    
+    useEffect(()=>{
+        load();
+    },[])
 
     return(
         <div>
-            <h1>results for {school}</h1><button id="loadBtn" onClick={load}>load</button>
+            <h1>results for {school}</h1>
             <div id="results-cont">
             </div>
         </div>
