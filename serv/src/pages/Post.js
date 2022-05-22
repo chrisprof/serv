@@ -36,19 +36,23 @@ function Post()
             }
 
         main();
+
+        alert('Posted')
     }
     const [school, setSchool] = useState(localStorage.getItem('highschool'))
 
     return(
         <div>
-            <h1>post to {school}</h1>
+        <h1>post to {school}</h1>
+        <div className='flexcent'>
             <div id="text-input-cont">
-                <input className="text-input" id="title"type={"text"} placeholder="Title"/>
-                <input className="text-input" id="job"type={"text"} placeholder="Job Type"/>
-                <input className="text-input" id="hours"type={"text"} placeholder="Hours"/>
+                <input className="text-input" id="title"type={"text"} placeholder="title"/>
+                <input className="text-input" id="job"type={"text"} placeholder="job type"/>
+                <input className="text-input" id="hours"type={"text"} placeholder="hours"/>
 
                 <button id="post" onClick={post}>post</button>
             </div>
+        </div>
         </div>
     )
 }

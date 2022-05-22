@@ -21,6 +21,21 @@ html{
     margin: 2.5%;
 }
 
+#loadBtn{
+    border:none;
+    border-radius: 13px;
+    color:white;
+    background: var(--clr-purple200);
+    transition: all 0.25s;
+    margin:2%;
+    width:150px;
+    height:70px;
+    font-size: large;
+}
+
+#loadBtn:hover{
+    box-shadow: 3px 3px 0px var(--clr-darkpurple);
+}
 .result-bottom{
     height:80px;
     margin-bottom: 100%;

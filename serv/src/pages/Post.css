@@ -8,4 +8,23 @@
 #text-input-cont{
     display: flex;
     justify-content: center;
+    flex-direction: column;
+}
+
+.flexcent{
+    display: flex;
+    justify-content: center; 
+}
+
+input{
+    margin-top: 5%;
+}
+
+#post{
+    height:60px;
+    margin-top: 5%;
+    border:none;
+    border-radius: 13px;
+    background-color: var(--clr-purple200);
+    color:white;
 }

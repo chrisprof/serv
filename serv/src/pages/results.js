@@ -1,5 +1,6 @@
-import {auth} from '../firebase';
-import {useEffect,useState} from "react"
+import {auth,db} from '../firebase';
+import {useEffect, useState} from "react"
+import { doc,getDoc} from "firebase/firestore"; 
 import './results.css'
 
 
@@ -38,9 +39,32 @@ function Results()
         paragraph.appendChild(hrs)
 
         job.innerHTML=jobtype;
-        hrs.innerHTML=hours;
+        hrs.innerHTML="Hours: "+hours;
         nameHeader.innerHTML=name;
         document.getElementById('results-cont').appendChild(resultDiv)
+    }
+
+    function load(){
+        const place = localStorage.getItem('highschool')
+        async function main(){
+            const docRef = doc(db, "servicereqs", place);
+            const docSnap = await getDoc(docRef);
+        
+            try{
+                const joblist = docSnap.data()['joblist'];
+                for(var x in joblist)
+                {
+                    console.log(x[0])
+                    makeListing(x,joblist[x][1],joblist[x][0])
+                }
+            }
+
+            catch{
+                console.log("No entries")
+            }
+        }
+
+        main();
     }
 
     function test()
@@ -50,19 +74,9 @@ function Results()
 
     return(
         <div>
-            <h1>results for {school}</h1>
+            <h1>results for {school}</h1><button id="loadBtn" onClick={load}>load</button>
             <div id="results-cont">
-                <div className='result'>
-                    <div className="name-cont">
-                        <h1>Name</h1>
-                    </div>
-                    <div className='result-bottom'>
-                        <p><span className='job'>Job Type</span> <span className='hours'>Hours</span></p>
-                    </div>
-                </div>
             </div>
-
-            <button onClick={test}>click</button>
         </div>
     )
 }
