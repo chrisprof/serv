@@ -20,20 +20,35 @@
 }
 
 #User-guide {
-    margin-bottom: 70px;
+    margin-bottom: 0px;
     color: var(--clr-primary-dark);
 }
 
-.T-Image {
-    width: 300px;
+#T-Image {
+    width: auto;
+    height: 370px;
     float: right;
+    padding-bottom: 10px;
+    padding-right: 220px
+}
+
+#S-Image {
+    width: 150px;
+    height: auto;
+    float: right;
+    padding-right: 200px
 }
 
 .T-Purp {
+    padding-top: 10px;
     color: var(--clr-primary-dark);
 }
 
 
 .T-text {
     color: var(--clr-purple200);
+}
+
+.T-h3 {
+    padding-left: 50px;
 }

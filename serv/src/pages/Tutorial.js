@@ -20,10 +20,10 @@ function Tutorial()
             <div id = 'Back-Teach' className='tut'>
                 <h1 className='T-Purp'>Teachers</h1>
 
-                <h3>
-                    <img src='/images/Temp_pic.png' alt = 'image' className ='T-Image'/>
+                <img src='https://media-public.canva.com/zblsw/MAD-vkzblsw/1/s.svg' alt = 'image' id ='T-Image'/>
 
-                    Hello Teachers! This is Serv, a free community service manager made by Jersey city Students! <br/>
+                <h3 className = 'T-h3'>
+                    Hello Teachers! This is Serv, a free community service manager made by Jersey city Students! <br/> 
 
                     As a Teacher you will be able to post requests and delete community service requests.<br/> <br/>
 
@@ -45,9 +45,8 @@ function Tutorial()
             <div id = 'Back-Student' className='tut'>
                 <h1 className='T-Purp'>Students</h1>
             
-
-                <h3>
-                    <img src='/images/Temp_pic2.png' alt = 'image' className ='T-Image'/>
+                <img src='https://media-public.canva.com/8C-_o/MAEIfT8C-_o/1/s3-1.svg' alt = 'image' id ='S-Image'/>
+                <h3 className = 'T-h3'>
 
                     Hello Students! This is Serv, a free community service manager made by students, just like all of you!<br/>
 
