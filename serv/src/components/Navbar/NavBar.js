@@ -9,7 +9,7 @@ function NavBar() {
         <nav>
             <ul className='n-list'>
                 <li className='n-item'>
-                    <Link to='/home'>{!auth.currentUser ? "home" : ""}</Link>
+                    <Link to={auth.currentUser ? localStorage.getItem('teacher') ? '/thome': '/shome' : '/'}>home</Link>
                 </li>
                 <li className='n-item'>
                     <Link to='/settings'>settings</Link>
@@ -19,9 +19,6 @@ function NavBar() {
                 </li>
                 <li className='n-item'>
                     <Link to='/tutorial'>help</Link>
-                </li>
-                <li className='n-item' id="post">
-                    <Link to='/post'>{localStorage.getItem('teacher') ? "post" : ""}</Link>
                 </li>
             </ul>
         </nav>

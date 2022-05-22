@@ -1,0 +1,10 @@
+.text-input{
+    border:none;
+    border-radius: 10px;
+}
+
+#text-input-cont{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}

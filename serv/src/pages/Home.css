@@ -1,0 +1,42 @@
+#dropdownMenu{
+    width:400px;
+    height:80px;
+    text-align: center;
+    font-size: larger;
+    border:none;
+    border-radius: 10px;
+}
+
+#searchBtn{
+    border:none;
+    height:40px;
+    width:100px;
+    border-radius: 10px;
+    background: var(--clr-purple200);
+    color:white;
+    margin-left: 10px;
+    transition: all 0.25s;
+}
+
+#searchBtn:hover{
+    box-shadow: 3px 3px 0px var(--clr-darkpurple);
+}
+
+#welcome{
+    font-size: 40px;
+    margin:0;
+    margin-bottom:30px;
+}
+
+#guide{
+    font-size:70px;
+    margin:0;
+    margin-bottom:50px;
+}
+
+.centerFlexH{
+    display:flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}

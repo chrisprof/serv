@@ -19,11 +19,19 @@ function Main()
         
     }
 
-    auth.onAuthStateChanged(()=>{
-      if(auth.currentUser)
-      {
-          window.location.href="/home"
-      }
+    auth.onAuthStateChanged(user=>{
+        if(user)
+        {
+            if(localStorage.getItem('teacher'))
+            {
+                window.location.href="/thome"
+            }
+
+            else
+            {
+                window.location.href="/shome"
+            }
+        }
     })
 
     return(

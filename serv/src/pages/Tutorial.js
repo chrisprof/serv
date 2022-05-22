@@ -6,8 +6,8 @@ import {useEffect} from "react"
 function Tutorial()
 {
 
-    auth.onAuthStateChanged(()=>{
-        if(!auth.currentUser)
+    auth.onAuthStateChanged(user=>{
+        if(!user)
         {
             window.location.href="/"
         }

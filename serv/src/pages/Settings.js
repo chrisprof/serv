@@ -11,8 +11,8 @@ function Settings()
         window.location.href = "/"
     }
 
-    auth.onAuthStateChanged(()=>{
-        if(!auth.currentUser)
+    auth.onAuthStateChanged(user=>{
+        if(!user)
         {
             window.location.href="/"
         }
