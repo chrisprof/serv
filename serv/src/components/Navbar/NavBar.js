@@ -9,7 +9,7 @@ function NavBar() {
         <nav>
             <ul className='n-list'>
                 <li className='n-item'>
-                    <Link to={auth.currentUser ? localStorage.getItem('teacher') ? '/thome': '/shome' : '/'}>home</Link>
+                    <Link to={localStorage.getItem('teacher') ? '/thome': '/shome'}>home</Link>
                 </li>
                 <li className='n-item'>
                     <Link to='/settings'>settings</Link>

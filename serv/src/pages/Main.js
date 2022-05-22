@@ -20,17 +20,23 @@ function Main()
     }
 
     auth.onAuthStateChanged(user=>{
-        if(user)
+        if(!user)
         {
-            if(localStorage.getItem('teacher'))
-            {
-                window.location.href="/thome"
-            }
+           return; 
+        }
 
-            else
-            {
-                window.location.href="/shome"
-            }
+        if(localStorage.getItem('teacher'))
+        {
+            window.location.href="/thome"
+        }
+
+        else if(localStorage.getItem('student'))
+        {
+            window.location.href="/shome"
+        }
+
+        else{
+            window.location.href='/check'
         }
     })
 

@@ -12,9 +12,16 @@ function THome()
         }
     })
 
-    const dropdownvalue = () => {
+    const continuePost = () => {
         let select = document.getElementById('dropdownMenu')
-        alert(select.value);
+        localStorage.setItem('highschool',select.value);
+        if(localStorage.getItem('teacher'))
+        {
+            window.location.href="/post"
+            return;
+        }
+
+        window.location.href="/results"
     }
     const [username,setUsername] = useState(localStorage.getItem('name'))
 
@@ -30,7 +37,7 @@ function THome()
                     <option value={"mcnair"}>McNair Academic High School</option>
                     <option value={"hths"}>High Tech High School</option>
                 </select>
-                <button id="searchBtn"onClick={dropdownvalue}>search</button>
+                <button id="searchBtn"onClick={continuePost}>go</button>
             </div>
 
         </div>

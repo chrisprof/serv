@@ -11,6 +11,8 @@ import Tutorial from './pages/Tutorial';
 import NavBar from './components/Navbar/NavBar';
 import Post from './pages/Post';
 import {useEffect} from "react"
+import Results from "./pages/results";
+import Check from './pages/checkPage'
 
 
 function App() {
@@ -27,6 +29,8 @@ function App() {
           <Route path="tutorial" element={<Tutorial />} />
           <Route path="*" element={<NotFound />} />
           <Route path="post" element={<Post />}/>
+          <Route path="Results" element={<Results />}/>
+          <Route path="check" element={<Check />}/>
         </Route>
       </Routes>
     </BrowserRouter>

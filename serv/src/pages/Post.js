@@ -1,5 +1,7 @@
-import {auth} from '../firebase';
-import {useEffect} from "react"
+import {auth,db} from '../firebase';
+import {useState} from "react"
+
+import { doc, setDoc,getDoc} from "firebase/firestore"; 
 import './Post.css'
 
 
@@ -12,14 +14,40 @@ function Post()
         }
     })
 
+    function post()
+    {
+        const hours = document.getElementById('hours').value;
+        const jobtype = document.getElementById('job').value;
+        const title = document.getElementById('title').value;
+        const school = localStorage.getItem('highschool');
+
+        async function main()
+            {
+                const docRef = doc(db,"servicereqs",school);
+                const docSnap = await getDoc(docRef);
+            
+                var joblist = docSnap.data()['data']; 
+                console.log(joblist);
+                joblist[title] = [hours,jobtype]
+                console.log(joblist);
+                await setDoc(doc(db,"servicereqs",school),{
+                    joblist
+                });
+            }
+
+        main();
+    }
+    const [school, setSchool] = useState(localStorage.getItem('highschool'))
+
     return(
         <div>
-            <h1>post</h1>
+            <h1>post to {school}</h1>
             <div id="text-input-cont">
-                <input class="text-input" type={"text"} placeholder="Title"/>
-                <input class="text-input" type={"text"} placeholder="Description"/>
-                <input class="text-input" type={"text"} placeholder="Hours"/>
-                <button>post</button>
+                <input className="text-input" id="title"type={"text"} placeholder="Title"/>
+                <input className="text-input" id="job"type={"text"} placeholder="Job Type"/>
+                <input className="text-input" id="hours"type={"text"} placeholder="Hours"/>
+
+                <button id="post" onClick={post}>post</button>
             </div>
         </div>
     )

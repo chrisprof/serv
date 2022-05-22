@@ -1,0 +1,21 @@
+.quesBtn{
+    background-color: var(--clr-purple200);
+    border:none;
+    color:white;
+    border-radius: 10px;
+    width:250px;
+    height:125px;
+    font-size:30px;
+    margin-top: 10%;
+    margin:5%;
+    transition: all 0.25s;
+}
+
+.quesBtn:hover{
+    box-shadow: 3px 3px 0px var(--clr-darkpurple);
+}
+
+#btnCont{
+    display: flex;
+    justify-content: center;
+}
