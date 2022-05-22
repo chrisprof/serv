@@ -1,5 +1,6 @@
 
 import { Outlet, Link } from "react-router-dom";
+import { auth } from "../../firebase";
 import './NavBar.css'
 
 function NavBar() {
@@ -8,7 +9,7 @@ function NavBar() {
         <nav>
             <ul className='n-list'>
                 <li className='n-item'>
-                    <Link to='/home'>home</Link>
+                    <Link to='/home'>{!auth.currentUser ? "home" : ""}</Link>
                 </li>
                 <li className='n-item'>
                     <Link to='/settings'>settings</Link>
@@ -17,7 +18,10 @@ function NavBar() {
                     <Link to='/aboutus'>about us</Link>
                 </li>
                 <li className='n-item'>
-                    <Link to='/Tutorial'>help</Link>
+                    <Link to='/tutorial'>help</Link>
+                </li>
+                <li className='n-item' id="post">
+                    <Link to='/post'>{localStorage.getItem('teacher') ? "post" : ""}</Link>
                 </li>
             </ul>
         </nav>

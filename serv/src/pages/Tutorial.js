@@ -5,13 +5,13 @@ import {useEffect} from "react"
 
 function Tutorial()
 {
-    useEffect(()=>{
-        if(!auth.currentUser&&!window.location.href=='/')
+
+    auth.onAuthStateChanged(()=>{
+        if(!auth.currentUser)
         {
-            console.log(window.location.href)
-            window.location.href='/'
+            window.location.href="/"
         }
-    },[])
+    })
 
     return(
         <div id = 'Back-Tutorial'>
