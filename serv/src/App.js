@@ -22,6 +22,7 @@ function App() {
       <Routes>
         <Route path="/" element={<NavBar />}>
           <Route index element={<Main />} />
+          <Route path="*" element={<NotFound />} />
           <Route path="aboutus" element={<AboutUs />} />
           <Route path="settings" element={<Settings />} />
           <Route path="shome" element={<SHome />} />
