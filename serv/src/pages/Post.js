@@ -26,9 +26,9 @@ function Post()
                 const docRef = doc(db,"servicereqs",school);
                 const docSnap = await getDoc(docRef);
             
-                var joblist = docSnap.data()['data']; 
+                var joblist = docSnap.data()['joblist']; 
                 console.log(joblist);
-                joblist[title] = [hours,jobtype]
+                joblist[String(title)] = [hours,jobtype]
                 console.log(joblist);
                 await setDoc(doc(db,"servicereqs",school),{
                     joblist

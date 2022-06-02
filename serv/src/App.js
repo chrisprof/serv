@@ -2,7 +2,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
 import Main from './pages/Main';
-import NotFound from './pages/NotFound';
 import AboutUs from './pages/AboutUs';
 import Settings from './pages/Settings';
 import THome from './pages/teacherHome';
@@ -10,7 +9,6 @@ import SHome from './pages/studentHome';
 import Tutorial from './pages/Tutorial';
 import NavBar from './components/Navbar/NavBar';
 import Post from './pages/Post';
-import {useEffect} from "react"
 import Results from "./pages/results";
 import Check from './pages/checkPage'
 
@@ -22,7 +20,6 @@ function App() {
       <Routes>
         <Route path="/" element={<NavBar />}>
           <Route index element={<Main />} />
-          <Route path="*" element={<NotFound />} />
           <Route path="aboutus" element={<AboutUs />} />
           <Route path="settings" element={<Settings />} />
           <Route path="shome" element={<SHome />} />

@@ -66,7 +66,7 @@ function Results()
 
         main();
     }
-    
+
     useEffect(()=>{
         load();
     },[])
