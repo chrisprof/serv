@@ -20,26 +20,29 @@ function Results()
         let resultDiv = document.createElement('div');
         let nameCont = document.createElement('div');
         let resultBottom = document.createElement('div');
-        let paragraph = document.createElement('p');
+        let viewBtn = document.createElement('btn');
         let nameHeader = document.createElement('h1');
         let job = document.createElement('span');
         let hrs = document.createElement('span');
 
         job.className='job'
+        viewBtn.className='viewBtn'
         hrs.className='hours'
         resultBottom.className='result-bottom'
         nameCont.className='name-cont'
         resultDiv.className='result';
 
+
         resultDiv.appendChild(nameCont)
         resultDiv.appendChild(resultBottom)
         nameCont.appendChild(nameHeader)
-        resultBottom.appendChild(paragraph)
-        paragraph.appendChild(job)
-        paragraph.appendChild(hrs)
+        resultBottom.appendChild(job)
+        resultBottom.appendChild(viewBtn)
+        resultBottom.appendChild(hrs)
 
         job.innerHTML=jobtype;
-        hrs.innerHTML="Hours: "+hours;
+        hrs.innerHTML="HRs: "+hours;
+        viewBtn.innerHTML='view'
         nameHeader.innerHTML=name;
         document.getElementById('results-cont').appendChild(resultDiv)
     }
@@ -52,9 +55,8 @@ function Results()
         
             try{
                 const joblist = docSnap.data()['joblist'];
-                for(var x in joblist)
+                for(var x in joblist.keys().length)
                 {
-                    console.log(x[0])
                     makeListing(x,joblist[x][1],joblist[x][0])
                 }
             }
@@ -69,6 +71,7 @@ function Results()
 
     useEffect(()=>{
         load();
+        console.log('hi')
     },[])
 
     return(

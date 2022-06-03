@@ -37,7 +37,7 @@ function Post()
 
         main();
 
-        alert('Posted')
+        alert(document.getElementById('time').value)
     }
     const [school, setSchool] = useState(localStorage.getItem('highschool'))
 
@@ -49,7 +49,8 @@ function Post()
                 <input className="text-input" id="title"type={"text"} placeholder="title"/>
                 <input className="text-input" id="job"type={"text"} placeholder="job type"/>
                 <input className="text-input" id="hours"type={"text"} placeholder="hours"/>
-
+                <input className='text-input' id="date" type={"date"}/>
+                <input className='text-input' id="time" type={'time'}/>
                 <button id="post" onClick={post}>post</button>
             </div>
         </div>
